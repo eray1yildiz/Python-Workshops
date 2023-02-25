@@ -52,7 +52,7 @@ def factorial():
 
     factorial=1
     num=int(input("Find the Factorial of: "))  
-    sayac=1
+    count=1
     if num < 0:
         print("Factorial does not exist for negative numbers")
         return
@@ -61,7 +61,7 @@ def factorial():
     else:
         while sayac<=num:
             factorial=factorial*sayac
-            sayac =sayac  + 1
+            count =count  + 1
     print(factorial)
 factorial()
 
