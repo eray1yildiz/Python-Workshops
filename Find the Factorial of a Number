@@ -1,0 +1,18 @@
+print("Find the Factorial of a Number")
+print("-------------------------------")
+
+def factorial(x):
+    
+    if x < 0:
+        print("Factorial does not exist for negative numbers") 
+    elif x == 0:
+        return 1
+    elif x == 1:
+        return x
+    else:
+        return x*factorial(x-1) 
+    
+
+num = int(input("The factorial of: ")) 
+
+print("The factorial of", num, "is", factorial(num))
