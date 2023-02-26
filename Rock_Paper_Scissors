@@ -1,0 +1,95 @@
+#Game of Rock Paper Scissors
+
+
+import random
+
+choice =["rock","paper","scissors"]
+print("Rock...Paper...Scissors...")
+print("1 : Rock")
+print("2 : Paper")
+print("3 : Scissors")
+
+rock = choice[0]
+paper = choice[1]
+scissors = choice[2]   
+
+computer_score=0
+player_score=0
+ 
+
+ 
+
+while True:
+    
+    computer_action = random.choice(choice)
+    player_action = input("Enter a choice: ")
+    
+        
+    
+    if player_action == "1":
+        if computer_action == rock:
+            print("Both players selected 'Rock'. It's a tie! ")
+            
+            
+        elif computer_action == paper:
+            
+            print("Paper covers rock! You lose.")
+            print("----------------------------")
+            computer_score = computer_score + 1
+            print("Player score: ", + player_score)       
+            print("Computer score: ", + computer_score)
+            
+        elif computer_action == scissors:
+            print("Rock smashes scissors! You win!")
+            print("-------------------------------")
+            player_score = player_score + 1
+            print("Player score: ", + player_score)
+            print("Computer score: ", + computer_score)
+            
+    if player_action == "2":
+        
+        if computer_action == rock:
+            print("Paper covers rock! You win!")
+            print("---------------------------")
+            player_score = player_score + 1
+            print("Player score: ", + player_score)
+            print("Computer score: ", + computer_score)
+            
+        elif computer_action == paper:
+            print("Both players selected 'Paper'. It's a tie!")
+            
+            
+        elif computer_action == scissors:
+            print("Scissors cuts paper! You lose.")
+            computer_score = computer_score + 1
+            print("------------------------------")
+            print("Player score: ", + player_score)
+            print("Computer score: ", + computer_score)
+            
+    if player_action == "3":
+        if computer_action == rock:
+            print("Rock smashes scissors! You lose.")
+            computer_score = computer_score + 1
+            print("--------------------------------")
+            print("Player score: ", + player_score)
+            print("Computer score: ", + computer_score)
+            
+        elif computer_action == paper:
+            print("Scissors cuts paper! You win!")
+            player_score = player_score + 1
+            print("-----------------------------")
+            print("Player score: ", + player_score)
+            print("Computer score: ", + computer_score)
+            
+        elif computer_action == scissors:
+            print("Both players selected 'Scissors'. It's a tie!")
+    
+    if computer_score==3:
+        print("YOU LOSE!!")
+        
+        break
+    
+    elif player_score==3:
+        print("YOU WİN!!")
+         
+        break
